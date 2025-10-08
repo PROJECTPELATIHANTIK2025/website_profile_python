@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Python App — Sahlan & Ariq</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar" data-aos="fade-down">
+    <div class="brand">⚡ Sahlan & Ariq</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/profil">Profil</a>
+      <a href="/app" class="active">Python App</a>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <h2 
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
+      Mini Apps (Python Backend)
+    </h2>
+    
+    <section class="app-grid">
+      <div 
+        class="app-card"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="0"
+      >
+        <h3>Kalkulator</h3>
+        <div class="row">
+          <input id="calc-a" type="number" placeholder="Angka 1">
+          <select id="calc-op">
+            <option value="add">+</option>
+            <option value="sub">−</option>
+            <option value="mul">×</option>
+            <option value="div">÷</option>
+          </select>
+          <input id="calc-b" type="number" placeholder="Angka 2">
+          <button id="btn-calc">Hitung</button>
+        </div>
+        <div class="result"><strong>Hasil:</strong> <span id="calc-result">—</span></div>
+      </div>
+
+      <div 
+        class="app-card"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+        data-aos-delay="150"
+      >
+        <h3>Konverter Suhu</h3>
+        <div class="row">
+          <input id="conv-value" type="number" placeholder="Nilai">
+          <select id="conv-from">
+            <option value="C">°C</option>
+            <option value="F">°F</option>
+            <option value="K">K</option>
+          </select>
+          <select id="conv-to">
+            <option value="F">°F</option>
+            <option value="C">°C</option>
+            <option value="K">K</option>
+          </select>
+          <button id="btn-conv">Konversi</button>
+        </div>
+        <div class="result"><strong>Hasil:</strong> <span id="conv-result">—</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+    <p>© 2025 — Aplikasi oleh Sahlan & Ariq</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true
+    });
+  </script>
+
+  <!-- Opsional: JS untuk interaksi (bisa dipisah ke /static/js/app.js) -->
+  <script>
+    // Contoh handler sederhana (opsional, hanya untuk demo UI)
+    document.getElementById('btn-calc')?.addEventListener('click', () => {
+      alert('Fitur ini terhubung ke API Python di backend!');
+    });
+    document.getElementById('btn-conv')?.addEventListener('click', () => {
+      alert('Fitur ini juga terhubung ke API Python!');
+    });
+  </script>
+</body>
+</html>
